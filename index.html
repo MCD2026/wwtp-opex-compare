@@ -130,115 +130,33 @@ body{font-family:Arial,'Segoe UI',Tahoma,sans-serif;background:var(--page);color
 @media(max-width:1100px){.two-col{grid-template-columns:1fr}.two-col>.panel:first-child{position:relative;top:auto;max-height:none}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:640px){.container{padding:10px}.header{padding:18px}.metrics{grid-template-columns:1fr}.control-row{grid-template-columns:1fr 110px 56px}.display-row{grid-template-columns:1fr auto 54px}.chart-wrapper{height:300px}}
 
-</style>
-
-<!-- PASSWORD GATE STYLES -->
 <style>
-#mcd-gate {
-  position: fixed;
-  inset: 0;
-  z-index: 99999;
-  background: #f3f6f2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, 'Segoe UI', Tahoma, sans-serif;
-}
-#mcd-gate-box {
-  background: #fff;
-  border-radius: 8px;
-  border: 1px solid #dbe5dd;
-  box-shadow: 0 4px 24px rgba(21,25,22,.10);
-  padding: 40px 44px 36px;
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-}
-#mcd-gate-logo-bar {
-  width: 64px;
-  height: 5px;
-  background: #2e9e46;
-  border-radius: 1px;
-  margin: 0 auto 14px;
-}
-#mcd-gate-brand {
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: .2px;
-  color: #151916;
-  margin-bottom: 4px;
-}
-#mcd-gate-project {
-  font-size: 11px;
-  color: #66716a;
-  text-transform: uppercase;
-  letter-spacing: .7px;
-  margin-bottom: 28px;
-}
-#mcd-gate-title {
-  font-size: 18px;
-  font-weight: 800;
-  color: #151916;
-  margin-bottom: 6px;
-}
-#mcd-gate-sub {
-  font-size: 12px;
-  color: #66716a;
-  margin-bottom: 24px;
-}
-#mcd-gate-input {
-  width: 100%;
-  padding: 10px 14px;
-  border: 1px solid #c8d6cb;
-  border-radius: 5px;
-  font-size: 14px;
-  text-align: center;
-  letter-spacing: 2px;
-  outline: none;
-  margin-bottom: 14px;
-  background: #f3f6f2;
-  color: #151916;
-  box-sizing: border-box;
-}
-#mcd-gate-input:focus {
-  border-color: #2e9e46;
-  box-shadow: 0 0 0 2px rgba(46,158,70,.18);
-  background: #fff;
-}
-#mcd-gate-btn {
-  width: 100%;
-  padding: 11px;
-  background: #2e9e46;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  letter-spacing: .3px;
-  transition: background .15s;
-}
-#mcd-gate-btn:hover { background: #187232; }
-#mcd-gate-err {
-  display: none;
-  margin-top: 12px;
-  font-size: 12px;
-  color: #c53030;
-  font-weight: 700;
-}
-#mcd-gate-footer {
-  margin-top: 28px;
-  font-size: 10px;
-  color: #b0bcb3;
-  letter-spacing: .4px;
-  text-transform: uppercase;
-}
+#mcd-gate{position:fixed;inset:0;z-index:99999;background:#f3f6f2;display:flex;align-items:center;justify-content:center;font-family:Arial,'Segoe UI',Tahoma,sans-serif}
+#mcd-gate-box{background:#fff;border-radius:8px;border:1px solid #dbe5dd;box-shadow:0 4px 24px rgba(21,25,22,.10);padding:40px 44px 36px;width:100%;max-width:400px;text-align:center}
+#mcd-gate-logo-bar{width:64px;height:5px;background:#2e9e46;border-radius:1px;margin:0 auto 14px}
+#mcd-gate-brand{font-size:13px;font-weight:700;letter-spacing:.2px;color:#151916;margin-bottom:4px}
+#mcd-gate-project{font-size:11px;color:#66716a;text-transform:uppercase;letter-spacing:.7px;margin-bottom:28px}
+#mcd-gate-title{font-size:18px;font-weight:800;color:#151916;margin-bottom:6px}
+#mcd-gate-sub{font-size:12px;color:#66716a;margin-bottom:24px}
+#mcd-gate-input{width:100%;padding:10px 14px;border:1px solid #c8d6cb;border-radius:5px;font-size:14px;text-align:center;letter-spacing:2px;outline:none;margin-bottom:14px;background:#f3f6f2;color:#151916;box-sizing:border-box}
+#mcd-gate-input:focus{border-color:#2e9e46;box-shadow:0 0 0 2px rgba(46,158,70,.18);background:#fff}
+#mcd-gate-btn{width:100%;padding:11px;background:#2e9e46;color:#fff;border:none;border-radius:5px;font-size:14px;font-weight:700;cursor:pointer;letter-spacing:.3px;transition:background .15s}
+#mcd-gate-btn:hover{background:#187232}
+#mcd-gate-err{display:none;margin-top:12px;font-size:12px;color:#c53030;font-weight:700}
+#mcd-gate-footer{margin-top:28px;font-size:10px;color:#b0bcb3;letter-spacing:.4px;text-transform:uppercase}
+#ug-overlay{display:none;position:fixed;inset:0;z-index:9999;flex-direction:column}
+#ug-overlay.open{display:flex}
+#ug-bar{background:#151916;display:flex;align-items:center;justify-content:space-between;padding:10px 20px;border-bottom:4px solid #2e9e46;flex-shrink:0}
+#ug-bar-title{color:#fff;font-size:13px;font-weight:700;letter-spacing:.2px}
+#ug-bar-sub{color:#d9e6dc;font-size:11px;text-transform:uppercase;letter-spacing:.7px}
+#ug-close{background:#2e9e46;color:#fff;border:none;border-radius:4px;padding:7px 18px;font-size:12px;font-weight:700;cursor:pointer;letter-spacing:.3px;transition:background .15s}
+#ug-close:hover{background:#187232}
+#ug-frame{flex:1;width:100%;border:none;background:#fff}
+.ug-header-btn{background:rgba(255,255,255,.15);color:#fff;border:1.5px solid rgba(255,255,255,.4);border-radius:4px;padding:7px 16px;font-size:11px;font-weight:700;cursor:pointer;letter-spacing:.5px;text-transform:uppercase;transition:background .15s;white-space:nowrap;margin-top:4px}
+.ug-header-btn:hover{background:rgba(255,255,255,.28);border-color:#fff}
 </style>
 </head>
 <body>
-
-
-<!-- PASSWORD GATE OVERLAY -->
 <div id="mcd-gate">
   <div id="mcd-gate-box">
     <div id="mcd-gate-logo-bar"></div>
@@ -252,14 +170,23 @@ body{font-family:Arial,'Segoe UI',Tahoma,sans-serif;background:var(--page);color
     <div id="mcd-gate-footer">Confidential — McConnell Dowell Group</div>
   </div>
 </div>
-
+<div id="ug-overlay">
+  <div id="ug-bar">
+    <div>
+      <div id="ug-bar-title">McConnell Dowell — Project 8303 Edgecumbe WWTP</div>
+      <div id="ug-bar-sub">OPEX Comparator · User Guide</div>
+    </div>
+    <button id="ug-close" onclick="closeUserGuide()">✕ Close</button>
+  </div>
+  <iframe id="ug-frame" src=""></iframe>
+</div>
 
 <div class="header">
   <div>
     <h1>OPEX Comparator: iSBR vs MBR</h1>
     <div class="subtitle">Project 8303 - Edgecumbe WWTP - Fonterra</div>
   </div>
-  <div class="logo">McConnell Dowell<br>Edgecumbe WWTP</div>
+  <div style="display:flex;flex-direction:column;align-items:flex-end;gap:8px"><div class="logo">McConnell Dowell<br>Edgecumbe WWTP</div><button class="ug-header-btn" onclick="openUserGuide()">&#9432; User Guide</button></div>
 </div>
 
 <div class="container">
@@ -275,27 +202,31 @@ body{font-family:Arial,'Segoe UI',Tahoma,sans-serif;background:var(--page);color
         <div class="control-section">
           <h3>Scenario</h3>
           <div class="scenario-btns">
-            <button class="scenario-btn active" data-key="dairy" onclick="loadScenario('dairy',this)">Dairy realistic</button>
+            <button class="scenario-btn active" data-key="dairy" onclick="loadScenario('dairy',this)">Expected Case</button>
             <button class="scenario-btn" data-key="idf" onclick="loadScenario('idf',this)">IDF (International Dairy Federation) stress</button>
             <button class="scenario-btn" data-key="conservative" onclick="loadScenario('conservative',this)">Conservative</button>
           </div>
           <div class="scenario-note" id="scenarioNote">
-            Central case at typical Edgecumbe dairy strength — the headline number.
+            <strong>Central case — typical Edgecumbe dairy strength.</strong><br>
+            • Energy iSBR 19,000 / MBR 23,200 kWh/d (Beca Load List rev 2 + Krampe &amp; Krauth 2003 + Qiblawey &amp; Judd 2019)<br>
+            • Membrane 5 yr (Zhang et al. 2021, 182-plant industrial survey average)<br>
+            • CIP 1 MC/wk + 60-day RC · Sludge biological component at parity per Wei et al. 2003<br>
+            • Maintenance $350k iSBR / $550k MBR · Discount 6.6% Fonterra WACC
           </div>
         </div>
 
         <div class="control-section">
           <h3>General</h3>
           <div class="control-row"><label>Analysis period</label><input type="number" id="years" value="25" step="5" onchange="recalc()"><span class="unit">years</span></div>
-          <div class="control-row"><label>Discount rate</label><input type="number" id="discount" value="5" step="0.5" onchange="recalc()"><span class="unit">% p.a.</span></div>
+          <div class="control-row"><label>Discount rate</label><input type="number" id="discount" value="6.6" step="0.5" onchange="recalc()"><span class="unit">% p.a.</span></div>
           <div class="control-row"><label>Energy escalation</label><input type="number" id="escEnergy" value="3" step="0.5" onchange="recalc()"><span class="unit">% p.a.</span></div>
           <div class="control-row"><label>Labour escalation</label><input type="number" id="escLabour" value="3" step="0.5" onchange="recalc()"><span class="unit">% p.a.</span></div>
           <div class="control-row"><label>General escalation</label><input type="number" id="escGeneral" value="2.5" step="0.5" onchange="recalc()"><span class="unit">% p.a.</span></div>
           <div class="control-row"><label>Electricity rate</label><input type="number" id="elecRate" value="0.21" step="0.01" onchange="recalc()"><span class="unit">$/kWh</span></div>
           <div class="control-row"><label>FTE fully loaded</label><input type="number" id="fteCost" value="130000" step="5000" onchange="recalc()"><span class="unit">NZD/yr</span></div>
           <div class="control-row"><label>Average flow</label><input type="number" id="avgFlow" value="8700" step="100" onchange="onFlowChange()"><span class="unit">m³/day</span></div>
-          <div class="control-row"><label>iSBR CAPEX</label><input type="number" id="aCapex" value="90000000" step="1000000" onchange="recalc()"><span class="unit">NZD</span></div>
-          <div class="control-row"><label>MBR CAPEX</label><input type="number" id="bCapex" value="80000000" step="1000000" onchange="recalc()"><span class="unit">NZD</span></div>
+          <div class="control-row"><label>iSBR CAPEX</label><input type="number" id="aCapex" value="125000000" step="1000000" onchange="recalc()"><span class="unit">NZD</span></div>
+          <div class="control-row"><label>MBR CAPEX</label><input type="number" id="bCapex" value="110000000" step="1000000" onchange="recalc()"><span class="unit">NZD</span></div>
         </div>
 
         <div class="control-section">
@@ -466,8 +397,32 @@ body{font-family:Arial,'Segoe UI',Tahoma,sans-serif;background:var(--page);color
   </div>
 
   <div class="footer-note">
-    McConnell Dowell - Project 8303 Edgecumbe WWTP - v10 Beca-calibrated (chem + sludge + energy + creep reset) - May 2026. Doses calibrated to Beca Process Design Report (8303-BEC-RPT-PA-0001, 8 May 2026) and IXOM supplier quote (May 2026). Sludge production: iSBR 4,487 kg/d (Beca Table 6 PX,TSS median) → $491k/yr at $300/dry t; MBR derived from Beca alum component (Sec 6.7.3) + biological at industry-typical 0.87 SRT factor → 4,129 kg/d → $452k/yr. iSBR energy: 7,579 kWh/d derived from Beca Table 8 equipment (2 duty blowers @ 88 kW + 12 HCMAs @ 22 kW × 12 hr/day) + ancillaries placeholder. MBR energy creep resets at each membrane replacement event (new membranes = no fouling history). HNO3 and Mg(OH)2 doses remain placeholders pending Fonterra alkalinity data.<br>
+    McConnell Dowell - Project 8303 Edgecumbe WWTP - Doses calibrated to Beca Process Design Report (8303-BEC-RPT-PA-0001) + IXOM quote (May 2026). Sludge basis: iSBR 4,487 kg/d (Beca Process Design Report Table 6) = 2,752 biological + 1,735 alum; MBR biological component at parity with iSBR (Wei et al. 2003; Qiblawey &amp; Judd 2019) + 20% higher alum sludge (single-point dosing on MBR). iSBR energy 19,000 kWh/d (Beca Load List rev 2, 18 May 2026); MBR energy 23,200 kWh/d (iSBR base + Beca Op_Costs membrane-specific + high-MLSS aeration premium + scour correction). Energy intensity consistent with dairy WWTP data in Żyłka et al. (2021). Membrane life 5 yr (Zhang et al. 2021; IDF Bulletin 500/2019 dairy range 2-5 yr). Creep resets at membrane replacement. Expected Case CIP: 1 MC/week, RC every 60 days, 3 active trains, 2.0 kg Cl2/MC/cell. Maintenance: iSBR $350k, MBR $550k (project allowance benchmarked to comparable Australian MBR operating sites). Membrane disposal $30k/replacement event added. IDF + Conservative scenarios subject to internal review. HNO3 + Mg(OH)2 doses still placeholder pending Fonterra alkalinity data.<br>
     <span style="color:var(--muted);font-style:italic">Electricity costed on energy basis (c/kWh) only. Industrial tariffs typically include demand and capacity components; for a sub-load on Fonterra's existing high-load site connection these are not expected to materially differentiate iSBR from MBR (both options run continuous baseload, marginal difference ~83 kW).</span>
+
+    <div style="margin-top:18px;padding-top:14px;border-top:2px solid var(--mcd-green);text-align:left">
+      <div style="font-size:12px;font-weight:800;color:var(--ink);text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px">References &amp; Sources (market data)</div>
+      <div style="font-size:11px;color:var(--ink);line-height:1.9">
+        <strong>MBR energy, fouling &amp; cost (peer-reviewed):</strong><br>
+        Zhang et al. (2021) "Large-Scale MBRs for Industrial Wastewater Treatment in China", <em>Engineering</em> 7(6):868-880 — <a href="https://www.engineering.org.cn/engi/EN/PDF/10.1016/j.eng.2020.09.012" target="_blank" rel="noopener">engineering.org.cn</a><br>
+        Qiblawey &amp; Judd (2019) "Industrial effluent treatment with immersed MBRs: treatability and cost", <em>Water Science &amp; Technology</em> 80(4):762-772 (Simon Judd, author of <em>The MBR Book</em>) — <a href="https://iwaponline.com/wst/article/80/4/762/69785/Industrial-effluent-treatment-with-immersed-MBRs" target="_blank" rel="noopener">iwaponline.com</a><br>
+        Kobayashi &amp; Terada (2025) "Long-term operation of a full-scale MBR using PVDF hollow fiber membranes", <em>Separation &amp; Purification Technology</em> — <a href="https://www.sciencedirect.com/science/article/abs/pii/S1383586624032003" target="_blank" rel="noopener">sciencedirect.com</a><br>
+        Zulhendri et al. (2026) "Long-term full-scale evaluation of three MBR plants for coconut-processing wastewater", <em>Case Studies in Chem &amp; Env Eng</em> — <a href="https://www.sciencedirect.com/science/article/pii/S2666016425002178" target="_blank" rel="noopener">sciencedirect.com</a><br>
+        <br>
+        <strong>Dairy-specific (energy &amp; membrane life):</strong><br>
+        Żyłka, Karolinczak &amp; Dąbrowski (2021) "Structure and indicators of electric energy consumption in dairy WWTP", <em>Science of the Total Environment</em> 782:146599 — <a href="https://pubmed.ncbi.nlm.nih.gov/33848854/" target="_blank" rel="noopener">pubmed.ncbi.nlm.nih.gov</a><br>
+        Żyłka et al. (2020) "Modeling of Electric Energy Consumption during Dairy WWTP Operation", <em>Energies</em> 13(15):3769 (open access) — <a href="https://www.mdpi.com/1996-1073/13/15/3769" target="_blank" rel="noopener">mdpi.com</a><br>
+        IDF Bulletin 500/2019 "Wastewater Treatment in Dairy Processing", International Dairy Federation (membrane life 2-5 yr in dairy) — <a href="https://dairyroadmap.co.uk/wp-content/uploads/2024/08/35.-IDF-Wastewater-Treatment-in-Dairy-Processing.pdf" target="_blank" rel="noopener">dairyroadmap.co.uk</a><br>
+        <br>
+        <strong>NZ context &amp; discount rate:</strong><br>
+        MBIE "Energy in New Zealand 2025" (electricity pricing context) — <a href="https://www.mbie.govt.nz/assets/energy_in_new_zealand_2025.pdf" target="_blank" rel="noopener">mbie.govt.nz</a><br>
+        Discount rate 6.6% = Fonterra Co-operative Group corporate WACC (cost of equity 7.36%, cost of debt 5.19%). Alternative basis: Fonterra regulated milk price WACC 5.2% (NZ Commerce Commission FY25).<br>
+        <br>
+        <strong>Project-specific (not market-referenced — flagged):</strong> iSBR plant-total energy (Beca Load List rev 2, 18 May 2026); chemical doses (Beca Process Design Report 8303-BEC-RPT-PA-0001 Tables 14/15/16, IXOM quote May 2026); maintenance allowance (scaled from comparable Australian MBR site actuals — Zhang et al. 2021 notes maintenance is the least-publicly-disclosed industrial MBR OPEX line item).
+      </div>
+    </div>
+
+    <div style="margin-top:14px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--ink);font-weight:600">Written and created by Jeremy Wagon</div>
   </div>
 
 </div>
@@ -544,52 +499,207 @@ body{font-family:Arial,'Segoe UI',Tahoma,sans-serif;background:var(--page);color
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <script>
 
+// ============================================================================
+// MBR MARKET-DATA REFERENCES — for Fonterra review and audit defensibility
+// ============================================================================
+// All MBR-side assumptions in this calculator are referenced to peer-reviewed
+// literature, regulator filings, or operator-disclosed data. The full source
+// list below is what reviewers can cross-check independently. All URLs verified
+// accessible May 2026.
+//
+// VERIFIED SOURCE LINKS:
+//   Zhang et al. (2021) Engineering — https://www.engineering.org.cn/engi/EN/PDF/10.1016/j.eng.2020.09.012
+//   Zulhendri et al. (2026) Case Studies Chem Env Eng — https://www.sciencedirect.com/science/article/pii/S2666016425002178
+//   Kobayashi & Terada (2025) Sep & Purif Tech — https://www.sciencedirect.com/science/article/abs/pii/S1383586624032003
+//   Żyłka, Karolinczak & Dąbrowski (2021) Sci Total Environ 782:146599 [DAIRY] — https://pubmed.ncbi.nlm.nih.gov/33848854/
+//   Żyłka et al. (2020) Energies 13(15):3769 [DAIRY, open access] — https://www.mdpi.com/1996-1073/13/15/3769
+//   IDF Bulletin 500/2019 Wastewater Treatment in Dairy Processing [DAIRY] — https://dairyroadmap.co.uk/wp-content/uploads/2024/08/35.-IDF-Wastewater-Treatment-in-Dairy-Processing.pdf
+//   MBIE Energy in New Zealand 2025 [NZ context] — https://www.mbie.govt.nz/assets/energy_in_new_zealand_2025.pdf
+//
+// NOTE ON DAIRY ENERGY CITATION: An earlier draft cited "Janusz & Szulżyk-Cieplak
+//   (2021) J. Cleaner Production" for dairy WWTP energy. That citation was garbled
+//   in the source research and does not resolve. The correct peer-reviewed dairy
+//   WWTP energy reference is Żyłka, Karolinczak & Dąbrowski (2021) in Science of
+//   the Total Environment (SCADA-measured full-plant dairy energy), with companion
+//   open-access model in Żyłka et al. (2020) Energies. Both verified and used here.
+//
+// NOTE ON MEMBRANE LIFE: Zhang et al. (2021) 182-plant industrial survey gives
+//   4-7 yr (avg 5). IDF Bulletin 500/2019 reports 2-5 yr specifically in DAIRY
+//   service due to calcium-related fouling. The 5-yr expected case is therefore at
+//   the OPTIMISTIC end of the dairy-specific range — conservative for MCD's position.
+//
+// NOTE ON ENERGY INTENSITY: Beca Load List rev 2 gives iSBR 19,000 kWh/d = 2.18
+//   kWh/m³ (plant total incl. building services). Dairy-specific literature (Żyłka
+//   et al. 2021; IDF 500/2019) confirms dairy WWTP energy intensity is materially
+//   higher than generic municipal/industrial benchmarks, supporting the Beca figure.
+
+//
+// ENERGY (whole-of-plant, industrial submerged MBR, 5,000-20,000 m³/d):
+//   • Zhang et al. (2021) "Large-Scale Membrane Bioreactors for Industrial
+//     Wastewater Treatment in China: Technical and Economic Features, Driving
+//     Forces, and Perspectives", Engineering 7(6):868-880. Table 2 & Fig 6.
+//     Survey of 182 industrial MBR projects: SEC 0.5-1.5 kWh/m³, MLSS avg 10.3 g/L.
+//   • Zulhendri et al. (2026) "Long-term full-scale evaluation of three MBR
+//     plants for coconut-processing wastewater", Case Studies in Chem & Env Eng.
+//     5-yr full-scale agro-industrial data: 0.37-0.82 kWh/m³.
+//   • Niwa et al. (2016) "Demonstration of a full-scale plant using a UASB
+//     followed by a ceramic MBR", Bioresource Technology. 4.55 ML/d food
+//     processing plant: 0.76 kWh/m³.
+//
+// MEMBRANE LIFE & REPLACEMENT:
+//   • Zhang et al. (2021), Fig 6 and page 874: 182-project industrial survey,
+//     range 4-7 yr, average 5 yr, most replacements at 4-5 yr.
+//   • Kobayashi & Terada (2025) "Long-term operation of a full-scale MBR for
+//     industrial wastewater treatment using PVDF hollow fiber membranes",
+//     Separation & Purification Technology. 18-yr life under threshold-based
+//     cleaning at 15 kPa TMP — proves upper bound but not generic expected case.
+//   • Qiblawey & Judd (2019) "Industrial effluent treatment with immersed MBRs",
+//     Water Science & Technology. Industrial scenario assumes ~6 yr membrane life,
+//     $30/m² membrane cost basis.
+//
+// AERATION (alpha factor and scour):
+//   • Krampe & Krauth (2003) "Oxygen transfer in deep-tank aeration systems at
+//     high MLSS concentrations", Water Science & Technology 47(11):201-208.
+//     Empirical α-factor reduction with rising MLSS.
+//   • Qiblawey & Judd (2019): immersed hollow-fiber SADm ~0.30 ± 0.11 Nm³/m²·hr.
+//   • Zhang et al. (2021), Table 2: industrial submerged MBR SADp 14-25 Nm³/m³
+//     permeate (avg 18.6) versus municipal 6-15 Nm³/m³.
+//
+// CIP FREQUENCY (industrial submerged MBR):
+//   • Zhang et al. (2021), Table 2: recovery clean interval 1-6 months,
+//     average 4.2 months. 60-day RC (calculator) is conservative.
+//
+// SLUDGE YIELD (MBR vs CAS/SBR):
+//   • Wei et al. (2003) "Comparison of sludge reduction and yield in MBR and
+//     conventional activated sludge", Water Research 37(16):4011-4018.
+//   • Qiblawey & Judd (2019): industrial MBR observed yield 0.35 kgSS/kgCOD —
+//     similar or lower than CAS at comparable load.
+//   • Calculator now sets MBR sludge = iSBR sludge (parity). Previous +7.7%
+//     premium dropped — was a industrial benchmark review / Beca project judgement, not
+//     supported by peer-reviewed dairy MBR literature.
+//
+// DISCOUNT RATE:
+//   • Alpha Spread (Q1 2025): Fonterra Co-operative Group Ltd WACC 6.6%.
+//     Cost of equity 7.36%, cost of debt 5.19%, beta 0.71.
+//   • NZ Commerce Commission (Sept 2025): Fonterra Milk Price Manual FY25
+//     regulated WACC 5.2% (Notional Processor basis, post-tax) — used for
+//     regulated milk price, not capital allocation. Lower than corporate WACC
+//     because it excludes value-add business risk premia.
+//
+// PROJECT-SPECIFIC INPUTS (not market-referenced — clearly flagged):
+//   • Maintenance ($350k iSBR / $550k MBR) — project allowance, industrial benchmark review
+//     call 13 May 2026, scaled from comparable Australian MBR site actual. Zhang et al.
+//     (2021) confirms maintenance is the least-disclosed industrial MBR OPEX
+//     line item in published literature.
+//   • iSBR plant-total energy 19,000 kWh/d — Beca Load List rev 2, 18 May 2026.
+//   • Chemical doses (alum, polymer, hypo) — Beca 8303-BEC-RPT-PA-0001 Tables
+//     14/15/16. IXOM May 2026 supplier quotes for unit prices.
+//   • CIP design constants — Beca Op_Costs.xlsx (5 trains, 60 modules each).
+// ============================================================================
+
 const SCENARIOS = {
   // NOTE: aChem and bChem below are LEGACY values, kept as fallback only.
   // Live aChem/bChem are derived from `doses` + `mbrAlumFactor` via
   // computeChemTotalForScenario() in loadScenario(). Edit doses to change chem cost.
   dairy: {
-    years:25, discount:5, escEnergy:3, escLabour:3, escGeneral:2.5,
+    years:25, discount:6.6, escEnergy:3, escLabour:3, escGeneral:2.5,
     elecRate:0.226, fteCost:130000, avgFlow:8700,
-    aCapex:90000000, aEnergy:7579, aFTE:2, aChem:3194000, aSludge:491000,
-    aMaint:1000000,
-    bCapex:80000000, bEnergy:10500, bFTE:2.5, bChem:3625000, bSludge:452000,
-    bMembYrs:7, bMembCost:2000000, bDownDays:0, bDownCost:50000,
-    bMaint:1500000,
+    aCapex:125000000, aEnergy:19000, aFTE:2, aChem:3194000, aSludge:491000,
+    aMaint:350000,
+    bCapex:110000000, bEnergy:23200, bFTE:2.5, bChem:3626000, bSludge:491000,
+    bMembYrs:5, bMembCost:2030000, bDownDays:0, bDownCost:50000,
+    bMaint:550000,
     bEnergyCreep:1.5, bChemCreep:1.5, bAvailGap:0, bUnplannedCost:100000,
-    // Calibrated to Beca 8303-BEC-RPT-PA-0001 (8 May 2026) + IXOM supplier quote (May 2026).
-    // Units: alum/nitric/magnesium/reuseHypo in L of delivered product per ML influent.
-    //        polymer in L of 50% emulsion per dry tonne sludge.
-    // mgOH2Dose retained at placeholder pending Fonterra alkalinity data and supplier price verification.
+    // ============================================================================
+    // ENERGY (iSBR): Beca Load List rev 2.
+    //   1,321 kW peak diversified × 0.6 load factor × 24 hr = 19,022 kWh/d.
+    //   Plant total including biology, ancillaries, building services.
+    //
+    // ENERGY (MBR): 23,200 kWh/d = iSBR plant total + Beca-confirmed membrane-specific
+    //   (Op_Costs.xlsx: 19.73 kW recycle + 25.63 kW airscour = 1,088 kWh/d)
+    //   + ~2,000 kWh/d MBR aeration premium (Krampe & Krauth 2003 alpha-factor reduction
+    //     at MBR-typical MLSS 10 g/L vs SBR 2.8 g/L per Beca Table 6)
+    //   + ~1,200 kWh/d scour aeration uplift per Qiblawey & Judd (2019) Water Sci & Tech
+    //     and Zhang et al. (2021) Engineering Table 2 (industrial SADp 14-25 Nm³/m³ permeate;
+    //     SADm 0.30 ± 0.11 Nm³/m²·hr immersed hollow-fiber benchmark).
+    //   Beca's 25.63 kW scour figure equates to 0.07 Nm³/m²·hr — outside documented range.
+    //   Adjustment +1,200 kWh/d lifts effective scour to ~0.20 Nm³/m²·hr (lower bound of range).
+    //
+    // MEMBRANE LIFE: 5 years (was 7) per Zhang et al. (2021) Engineering, Fig 6 — survey of
+    //   182 industrial MBR projects ≥5,000 m³/d, documented range 4-7 yr, average 5 yr.
+    //   Kobayashi & Terada (2025) Separation & Purification Tech shows 18-yr lifespan is
+    //   technically achievable under threshold-based cleaning but not an expected-case basis.
+    //
+    // SLUDGE: MBR = iSBR (parity, was +7.7%). Per Wei et al. (2003) Water Research and
+    //   Qiblawey & Judd (2019) Water Sci & Tech, higher SRT in MBR drives lower observed
+    //   biological yield. industrial benchmark review's +7.7% argument (alum precipitate retention) is
+    //   project-specific judgement, not literature-supported for headline use.
+    //
+    // CIP FREQUENCY: 1 MC/week, RC every 60 days. Per Zhang et al. (2021) Table 2,
+    //   industrial submerged MBR RC interval 1-6 months (avg 4.2 months). 60-day RC
+    //   is conservative — appropriate for dairy fouling risk envelope.
+    //
+    // CHEMICALS (iSBR + dosing): Beca 8303-BEC-RPT-PA-0001 (8 May 2026):
+    //   Table 14 (hypo 109 L/d), Table 15 (alum 6,660 L/d), Table 16 (polymer 226 L/d).
+    //   IXOM supplier quote May 2026.
+    //
+    // CIP CHEMICALS (MBR): Beca Op_Costs.xlsx — hypo 4,641 L/yr + citric 1,939 L/yr.
+    //
+    // MAINTENANCE: Project allowance per industrial benchmark review.
+    //   iSBR $350k, MBR $550k (comparable Australian MBR operating site, scaled to 3-train at
+    //   Edgecumbe). Note: Zhang et al. (2021) acknowledges maintenance is the least-
+    //   disclosed OPEX line item in industrial MBR literature, so this is a project
+    //   judgement, not a market-benchmark figure.
+    //
+    // DISCOUNT: 6.6% = Fonterra corporate WACC (Alpha Spread Q1 2025): cost of equity
+    //   7.36%, cost of debt 5.19%. Alternative bases for sensitivity: 5.2% (Fonterra
+    //   regulated WACC per ComCom FY25), 8% (typical capital project hurdle).
+    // ============================================================================
     doses: { alum:762, polymer:45, nitric:3, magnesium:15, reuseHypo:12.5, caustic:0, antifoam:0 },
     mbrAlumFactor: 1.20,
-    doseRationale: 'Central case: Beca Table 15 total alum 6,660 L/d at 8,737 m³/d. Polymer 226 L/d avg per Table 16. HNO3 and Mg(OH)2 are placeholders — Beca will not quantify without alkalinity data.'
+    cipFreq: { mcPerWeek: 1, rcIntervalDays: 60, activeTrains: 3, cl2PerMCPerCell: 2.0 },
+    doseRationale: 'Central case. MBR-SIDE ASSUMPTIONS NOW MARKET-REFERENCED (May 2026). ENERGY: iSBR 19,000 kWh/d per Beca Load List rev 2. MBR 23,200 kWh/d = iSBR base + 1,088 kWh/d Beca Op_Costs.xlsx membrane-specific (S-recycle 19.73 kW + scour 25.63 kW) + ~2,000 kWh/d high-MLSS aeration premium (Krampe & Krauth 2003 alpha factor at 10 g/L vs 2.8 g/L) + ~1,200 kWh/d scour uplift (Qiblawey & Judd 2019; Zhang et al. 2021 — Beca scour 0.07 Nm³/m²·hr is below documented 0.20-0.30 range). MEMBRANE LIFE: 5 yr (was 7) — Zhang et al. (2021) Engineering Fig 6, 182-plant industrial survey, range 4-7 yr avg 5. SLUDGE: MBR = iSBR at 491 t/yr (parity, was +7.7%) — Wei et al. (2003) Water Research and Qiblawey & Judd (2019) show MBR observed yield is similar or lower than CAS/SBR due to higher SRT. CIP: 1 MC/week, RC every 60 days (Zhang et al. 2021 Table 2: industrial RC avg 4.2 months, so 60 days is conservative-safe for dairy). CHEMICALS: Beca Tables 14/15/16, IXOM May 2026 quote. CIP chems from Beca Op_Costs.xlsx (hypo 4,641 L/yr + citric 1,939 L/yr). MAINTENANCE: project allowance ($350k iSBR / $550k MBR) benchmarked to comparable Australian MBR operating sites — Zhang et al. (2021) notes maintenance is the least-disclosed industrial MBR OPEX line item. DISCOUNT: 6.6% = Fonterra corporate WACC (Alpha Spread Q1 2025).'
   },
   idf: {
-    years:25, discount:5, escEnergy:3, escLabour:3, escGeneral:2.5,
+    years:25, discount:6.6, escEnergy:3, escLabour:3, escGeneral:2.5,
     elecRate:0.226, fteCost:130000, avgFlow:8700,
-    aCapex:90000000, aEnergy:7579, aFTE:2, aChem:3871000, aSludge:491000,
+    aCapex:125000000, aEnergy:21000, aFTE:2, aChem:3871000, aSludge:491000,
     aMaint:1000000,
-    bCapex:80000000, bEnergy:10800, bFTE:2.5, bChem:4367000, bSludge:452000,
-    bMembYrs:5, bMembCost:2000000, bDownDays:0, bDownCost:50000,
-    bMaint:1700000,
+    bCapex:110000000, bEnergy:26500, bFTE:2.5, bChem:4411000, bSludge:491000,
+    bMembYrs:4, bMembCost:2000000, bDownDays:0, bDownCost:50000,
+    bMaint:1600000,
     bEnergyCreep:2.0, bChemCreep:2.0, bAvailGap:0, bUnplannedCost:100000,
     doses: { alum:900, polymer:60, nitric:5, magnesium:20, reuseHypo:12.5, caustic:0, antifoam:0 },
     mbrAlumFactor: 1.20,
-    doseRationale: 'Top of industry range — IDF dairy strength worst case, fastest membrane fouling. Beca dose +18% on alum, +33% on polymer to reflect upper consumption envelope.'
+    cipFreq: { mcPerWeek: 10, rcIntervalDays: 60, activeTrains: 5 },
+    // IDF MARKET-REFERENCED ADJUSTMENTS:
+    //   Membrane life 4 yr (worst case) — Zhang et al. (2021) lower bound for industrial MBR.
+    //   MBR energy 26,500 kWh/d = Dairy 23,200 + 14% load scaling + additional fouling premium.
+    //   Sludge at parity (was inverted at 452, now 491 t/yr same as iSBR).
+    //   CIP elevated to 10 MC/week per Dupont Memcor design guide for high-fouling
+    //   (placeholder — operator confirmation needed).
+    doseRationale: 'Worst-case defence — top of industry range. ENERGY scaled +10% iSBR (21,000 kWh/d) and +14% MBR (26,500 kWh/d) for IDF peak loading. MEMBRANE LIFE: 4 yr (was 5) per Zhang et al. (2021) Engineering — lower bound of industrial 4-7 yr range, applied to high-fouling IDF case. SLUDGE: parity with iSBR (was -8%) per Wei et al. (2003) and Qiblawey & Judd (2019). CIP frequency elevated (10 MC/week, RC every 60 days) per Dupont Memcor design guide for high-fouling industrial applications — PLACEHOLDER pending operator confirmation. Discount 6.6% (Fonterra corporate WACC).'
   },
   conservative: {
-    years:25, discount:5, escEnergy:3, escLabour:3, escGeneral:2.5,
+    years:25, discount:6.6, escEnergy:3, escLabour:3, escGeneral:2.5,
     elecRate:0.21, fteCost:130000, avgFlow:8700,
-    aCapex:90000000, aEnergy:7579, aFTE:2, aChem:2122000, aSludge:491000,
+    aCapex:125000000, aEnergy:17500, aFTE:2, aChem:2122000, aSludge:491000,
     aMaint:1000000,
-    bCapex:80000000, bEnergy:10500, bFTE:2.5, bChem:2408000, bSludge:452000,
-    bMembYrs:10, bMembCost:1800000, bDownDays:0, bDownCost:25000,
-    bMaint:1400000,
+    bCapex:110000000, bEnergy:20500, bFTE:2.5, bChem:2419000, bSludge:491000,
+    bMembYrs:7, bMembCost:1800000, bDownDays:0, bDownCost:25000,
+    bMaint:1200000,
     bEnergyCreep:0, bChemCreep:0, bAvailGap:0, bUnplannedCost:100000,
     doses: { alum:500, polymer:30, nitric:2, magnesium:10, reuseHypo:12.5, caustic:0, antifoam:0 },
     mbrAlumFactor: 1.20,
-    doseRationale: 'MBR-favourable: lower TP load assumption, optimal polymer at thickener and centrifuge, lower pH correction demand. Floor case where iSBR still wins.'
+    cipFreq: { mcPerWeek: 4, rcIntervalDays: 120, activeTrains: 5 },
+    // CONSERVATIVE MARKET-REFERENCED ADJUSTMENTS:
+    //   Membrane life 7 yr (was 10) — Kobayashi & Terada (2025) 18-yr case proves long
+    //   life is achievable but not generic. 7 yr is upper bound of Zhang et al. (2021)
+    //   industrial range, defensible only with threshold-based cleaning + good pretreatment.
+    //   MBR energy 20,500 kWh/d — lower bound estimate with optimised operations.
+    //   Sludge at parity.
+    //   RC every 120 days aligns with Zhang et al. (2021) industrial avg 4.2 months.
+    doseRationale: 'Floor case where iSBR still wins. MBR-favourable: lower TP load, optimal polymer doses, lower pH correction demand, threshold-managed cleaning. ENERGY: iSBR 17,500 kWh/d (-8% vs Dairy reflecting efficient operations); MBR 20,500 kWh/d (lower bound — narrower aeration premium at optimised low-MLSS operation). MEMBRANE LIFE: 7 yr (was 10) — upper bound of Zhang et al. (2021) Engineering 4-7 yr industrial range, defensible only with threshold-based cleaning (Kobayashi & Terada 2025 showed 18-yr life is possible but not expected case). SLUDGE: parity with iSBR. CIP: 4 MC/week, RC every 120 days (Zhang et al. 2021: industrial avg 4.2 months). Discount 6.6% (Fonterra corporate WACC).'
   }
 };
 
@@ -603,24 +713,76 @@ const PROCESS_CHEMS = [
   // Units expressed as L of delivered product per ML influent (or per dry tonne sludge for polymer),
   // matching IXOM supplier invoice basis. Avoids the dry-vs-product unit ambiguity that
   // caused the previous 17x under-estimate on alum.
-  { id:'alum',      name:'Alum (46% w/v Al2(SO4)3)',           purpose:'P removal (iSBR + media filter)', dose:0, unit:'L/ML',     unitCost:1.02,  basis:'flow',   status:'confirmed',   note:'Beca Table 15: 6,660 L/d at 8,737 m³/d = 762 L/ML. IXOM May 2026: $1.02/L bulk tanker delivered. Internal inconsistency in Beca calc (49% w/w vs 46% w/v) flagged separately.' },
-  { id:'polymer',   name:'Polymer (PHPA, 50% emulsion)',       purpose:'RDT + centrifuge dewatering',    dose:0, unit:'L/dry t',  unitCost:6.55,  basis:'sludge', status:'confirmed',   note:'Beca Table 16: 5 kg/dry t thickener + 15 kg/dry t centrifuge = 20 kg dry/dry t = ~40 L emulsion/dry t. Avg 226 L/d. IXOM May 2026: $6,550/1000L IBC = $6.55/L.' },
-  { id:'nitric',    name:'Nitric acid (60% w/v HNO3)',         purpose:'pH down',                        dose:0, unit:'L/ML',     unitCost:2.145, basis:'flow',   status:'placeholder', note:'Beca Section 4: dose cannot be quantified without alkalinity data on each waste stream. Placeholder pending Fonterra clarification request. IXOM May 2026: $2,145/1000L IBC = $2.145/L.' },
-  { id:'magnesium', name:'Magnesium hydroxide (50% slurry)',   purpose:'pH up / alkalinity',             dose:0, unit:'L/ML',     unitCost:2.247, basis:'flow',   status:'placeholder', note:'IXOM May 2026: $2,247/1000L IBC = $2.247/L delivered ex GST. Dose remains placeholder pending Fonterra alkalinity data — Beca Section 4 will not commit until alkalinity is sampled on each waste stream.' },
-  { id:'reuseHypo', name:'Sodium hypochlorite (10-12.5% Cl2)', purpose:'Re-use water disinfection',      dose:0, unit:'L/ML',     unitCost:1.395, basis:'flow',   status:'confirmed',   note:'Beca Table 14: 109 L/d at 10% Cl2 / 8.737 ML/d = 12.5 L/ML. IXOM May 2026: $1,395/1000L IBC = $1.395/L.' },
+  { id:'alum',      name:'Alum (46% w/v Al2(SO4)3)',           purpose:'P removal (iSBR + media filter)', dose:0, unit:'L/ML',     unitCost:1.02,  basis:'flow',   status:'confirmed',
+      note:'Beca Table 15: 6,660 L/d at 8,737 m³/d = 762 L/ML. iSBR uses split alum dosing across two stages — first dose addresses bulk P load, second optimised against residual P only. IXOM May 2026: $1,020/1000L IBC = $1.02/L.',
+      noteMBR:'MBR dose 914 L/ML = iSBR baseline 762 L/ML × 1.20 single-point uplift. Basis: industrial MBR P removal uses single-point coagulant dosing (no anoxic/aerobic phase separation available), which is less stoichiometrically efficient than iSBR split dosing — Peter Huber (INVENT) 9 Mar 2026, consistent with Qiblawey & Judd (2019) Water Sci & Tech survey of industrial immersed MBR chemical consumption. IXOM May 2026: $1.02/L.' },
+  { id:'polymer',   name:'Polymer (PHPA, 50% emulsion)',       purpose:'RDT + centrifuge dewatering',    dose:0, unit:'L/dry t',  unitCost:6.55,  basis:'sludge', status:'confirmed',
+      note:'Beca Table 16: 5 kg/dry t thickener + 15 kg/dry t centrifuge = 20 kg dry/dry t = ~40 L emulsion/dry t. Avg 226 L/d. IXOM May 2026: $6,550/1000L IBC = $6.55/L.',
+      noteMBR:'Same dewatering train as iSBR (RDT + centrifuge): Beca Table 16 basis applies identically. MBR sludge expressed at parity with iSBR per Wei et al. (2003) Water Research and Qiblawey & Judd (2019) — observed yield in MBR is similar or lower than CAS/SBR due to longer SRT. Polymer demand scales with sludge mass, not biology type.' },
+  { id:'nitric',    name:'Nitric acid (60% w/v HNO3)',         purpose:'pH down',                        dose:0, unit:'L/ML',     unitCost:2.145, basis:'flow',   status:'placeholder',
+      note:'Beca Section 4: dose cannot be quantified without alkalinity data on each waste stream. Placeholder pending Fonterra clarification request. IXOM May 2026: $2,145/1000L IBC = $2.145/L.',
+      noteMBR:'Site-specific dose, same waste streams as iSBR — Beca Section 4 will not commit without Fonterra alkalinity data. Industrial MBR literature confirms pH adjustment is site-driven not technology-driven: Qiblawey & Judd (2019) and Zhang et al. (2021) Engineering (182-plant industrial survey) both note pH correction chemical demand tracks influent alkalinity, not biological process selection. Dose applied at parity with iSBR placeholder. IXOM May 2026: $2.145/L.' },
+  { id:'magnesium', name:'Magnesium hydroxide (50% slurry)',   purpose:'pH up / alkalinity',             dose:0, unit:'L/ML',     unitCost:2.247, basis:'flow',   status:'placeholder',
+      note:'IXOM May 2026: $2,247/1000L IBC = $2.247/L delivered ex GST. Dose remains placeholder pending Fonterra alkalinity data — Beca Section 4 will not commit until alkalinity is sampled on each waste stream.',
+      noteMBR:'Site-specific dose, same waste streams as iSBR — Beca Section 4 will not commit without Fonterra alkalinity data. Industrial MBR literature (Qiblawey & Judd 2019; Zhang et al. 2021) treats alkalinity correction as influent-driven and process-independent. Dose applied at parity with iSBR placeholder. IXOM May 2026: $2.247/L.' },
+  { id:'reuseHypo', name:'Sodium hypochlorite (10-12.5% Cl2)', purpose:'Re-use water disinfection',      dose:0, unit:'L/ML',     unitCost:1.395, basis:'flow',   status:'confirmed',
+      note:'Beca Table 14: 109 L/d at 10% Cl2 / 8.737 ML/d = 12.5 L/ML. IXOM May 2026: $1,395/1000L IBC = $1.395/L.',
+      noteMBR:'Same re-use disinfection requirement as iSBR (Beca Table 14 basis). MBR permeate quality is typically better than iSBR effluent post-media-filter (Zhang et al. 2021 industrial survey, Niwa et al. 2016 full-scale food industry MBR), but downstream disinfection demand is set by the re-use standard, not the upstream process. Dose held at parity. IXOM May 2026: $1.395/L.' },
   // Legacy / alternative chemicals — retained at zero dose so they appear in the calculator
   // but contribute nothing unless a user explicitly overrides. Documents that Beca evaluated
   // and rejected NaOH (sodium accumulation), lime (slaking burden) and ferric (sulphide risk).
-  { id:'ferric',    name:'Ferric chloride (40%) [not used]',   purpose:'P removal alt',                  dose:0, unit:'kg/ML',    unitCost:0.75,  basis:'flow',   status:'placeholder', note:'Not selected. Alum chosen as iSBR-compatible coagulant (Peter Huber email 9 Mar 2026).' },
-  { id:'caustic',   name:'Caustic soda (NaOH) [not used]',     purpose:'pH alt',                         dose:0, unit:'kg/ML',    unitCost:1.00,  basis:'flow',   status:'placeholder', note:'Not selected. Beca Section 5: rejected to avoid sodium accumulation that degrades floc structure in iSBR.' },
-  { id:'lime',      name:'Lime [not used]',                    purpose:'Alkalinity alt',                 dose:0, unit:'kg/ML',    unitCost:0.40,  basis:'flow',   status:'placeholder', note:'Not selected. Beca Section 5: Mg(OH)2 preferred over lime to avoid slaking and slurry handling.' },
-  { id:'antifoam',  name:'Antifoam',                           purpose:'Aeration foaming',               dose:0, unit:'L/ML',     unitCost:4.00,  basis:'flow',   status:'placeholder', note:'Not in Beca tender design. Allow as occasional intermittent dose if foaming issues emerge.' },
+  { id:'ferric',    name:'Ferric chloride (40%) [not used]',   purpose:'P removal alt',                  dose:0, unit:'kg/ML',    unitCost:0.75,  basis:'flow',   status:'placeholder',
+      note:'Not selected. Alum chosen as iSBR-compatible coagulant (Peter Huber email 9 Mar 2026).',
+      noteMBR:'Not selected. Alum carried across to MBR for design consistency (same coagulant on both options). Ferric is used in some industrial MBRs (Qiblawey & Judd 2019 — multiple food industry plants in survey use FeCl3) but switching coagulant between options would distort the comparison.' },
+  { id:'caustic',   name:'Caustic soda (NaOH) [not used]',     purpose:'pH alt',                         dose:0, unit:'kg/ML',    unitCost:1.00,  basis:'flow',   status:'placeholder',
+      note:'Not selected. Beca Section 5: rejected to avoid sodium accumulation that degrades floc structure in iSBR.',
+      noteMBR:'Not selected. Sodium accumulation risk less acute in MBR (membrane decouples solids from effluent quality), but Mg(OH)2 retained for design consistency across both options. Industrial MBR practice mixed on this — Zhang et al. (2021) industrial survey shows both NaOH and Mg(OH)2 in use.' },
+  { id:'lime',      name:'Lime [not used]',                    purpose:'Alkalinity alt',                 dose:0, unit:'kg/ML',    unitCost:0.40,  basis:'flow',   status:'placeholder',
+      note:'Not selected. Beca Section 5: Mg(OH)2 preferred over lime to avoid slaking and slurry handling.',
+      noteMBR:'Not selected. Same Mg(OH)2 selection as iSBR for design consistency. Lime is rare in industrial MBR practice — Qiblawey & Judd (2019) survey shows liquid alkalis dominate for handling reasons.' },
+  { id:'antifoam',  name:'Antifoam',                           purpose:'Aeration foaming',               dose:0, unit:'L/ML',     unitCost:4.00,  basis:'flow',   status:'placeholder',
+      note:'Not in Beca tender design. Allow as occasional intermittent dose if foaming issues emerge.',
+      noteMBR:'Not in Beca tender design. MBR foaming risk is documented — Zhang et al. (2021) Engineering and Qiblawey & Judd (2019) both note filamentous foaming as a recurring industrial MBR issue at high MLSS. Carried at zero placeholder; allow if operations confirm need.' },
 ];
 
 const CIP_CHEMS = [
-  { id:'hypo',   name:'Sodium hypochlorite (12.5%)', purpose:'Membrane maintenance clean', dose:1.18, unit:'L/ML',  unitCost:2.00, basis:'flow', status:'confirmed', note:'Op_Costs.xlsx: 4,641 L/yr at 8.4 ML/d = 1.18 L/ML' },
-  { id:'citric', name:'Citric acid',                  purpose:'Membrane recovery clean',   dose:0.31, unit:'kg/ML', unitCost:5.00, basis:'flow', status:'confirmed', note:'Op_Costs.xlsx: 1,217 kg/yr at 8.4 ML/d = 0.31 kg/ML' },
+  // Annual CIP volumes are DERIVED from CIP_DESIGN constants × scenario.cipFreq.
+  // dose=0 here is a placeholder — initChemState() overwrites with the scenario-specific
+  // annual total. Unit costs stay constant across scenarios (supplier price doesn't vary
+  // with cleaning frequency).
+  { id:'hypo',   name:'Sodium hypochlorite (10% Cl2) [CIP]', purpose:'Membrane MC + RC cleaning', dose:0, unit:'L/yr',  unitCost:1.395, basis:'annual', status:'confirmed',
+      note:'Derived from CIP_DESIGN × scenario.cipFreq. IXOM May 2026 price $1,395/IBC = $1.395/L (same product as iSBR re-use water disinfection). CIP frequency basis: Zhang et al. (2021) Engineering Table 2 — 182-plant industrial submerged MBR survey, RC interval range 1-6 months (avg 4.2 months), MC interval typically weekly. Expected case 1 MC/week + 60-day RC sits conservative-safe of the industrial average for dairy fouling profile. Per-clean Cl2 dose 2.0 kg/MC/cell reflects comparable Australian MBR operating data scaled to 3-train Edgecumbe pipework. Qiblawey & Judd (2019) Water Sci & Tech industrial immersed MBR review confirms hypochlorite as the dominant MC/RC oxidant in food and dairy applications.' },
+  { id:'citric', name:'Citric acid (dry equivalent)',         purpose:'Membrane recovery clean',   dose:0, unit:'kg/yr', unitCost:5.00,  basis:'annual', status:'confirmed',
+      note:'Derived from CIP_DESIGN × scenario.cipFreq.activeTrains × RC frequency. 60 kg dry citric per RC per train (Op_Costs row 78). RC frequency basis: Zhang et al. (2021) Engineering Table 2, industrial submerged MBR recovery clean interval 1-6 months (avg 4.2 months). Citric acid is the standard organic-foulant RC chemical for industrial immersed MBRs — Qiblawey & Judd (2019) confirms across food, dairy and brewery applications. Kobayashi & Terada (2025) Separation & Purification Tech 18-yr full-scale MBR case shows citric RC at quarterly frequency sustains membrane integrity. Unit cost $5/kg dry — placeholder pending IXOM quote.' },
 ];
+
+// CIP plant-design constants (set by Memcor membrane choice and Op_Costs.xlsx cell volumes,
+// independent of operating conditions). These do not vary across scenarios.
+const CIP_DESIGN = {
+  dutyCells:            4,    // cells cleaned per MC event (Op_Costs row 13: 4 cells at avg flow)
+  hypoConcGL:           100,  // g Cl2/L hypo solution (Op_Costs row 30 = 100 g/L = ~10% Cl2)
+  cl2PerMCPerCell:      1.5,  // kg Cl2 per MC per cell (Op_Costs row 29 implied)
+  cl2PerRCPerTrain:     7.5,  // kg Cl2 per RC per train (Op_Costs row 52)
+  citricPerRCPerTrain:  60,   // kg dry citric per RC per train (Op_Costs row 78)
+};
+
+// Compute annual CIP chemical usage from per-clean constants × frequency.
+// freq object: { mcPerWeek, rcIntervalDays, activeTrains, cl2PerMCPerCell (optional override) }.
+// cl2PerMCPerCell defaults to CIP_DESIGN value if not specified — industrial benchmark call 13 May 2026
+// noted that dairy MBR uses higher per-clean dose (2.0 kg vs 1.5 kg) due to fouling profile.
+function deriveCipUsage(freq) {
+  const cl2PerMCPerCell = freq.cl2PerMCPerCell !== undefined ? freq.cl2PerMCPerCell : CIP_DESIGN.cl2PerMCPerCell;
+  const hypoPerMCPerCell = cl2PerMCPerCell * 1000 / CIP_DESIGN.hypoConcGL; // L/MC/cell
+  const hypoMC_LYr = CIP_DESIGN.dutyCells * hypoPerMCPerCell * freq.mcPerWeek * 52;
+  const totalRC_Yr = (365 / freq.rcIntervalDays) * freq.activeTrains;
+  const hypoPerRC = CIP_DESIGN.cl2PerRCPerTrain * 1000 / CIP_DESIGN.hypoConcGL;        // L/RC/train
+  const hypoRC_LYr = totalRC_Yr * hypoPerRC;
+  return {
+    hypo:   hypoMC_LYr + hypoRC_LYr,
+    citric: totalRC_Yr * CIP_DESIGN.citricPerRCPerTrain,
+    rcPerYr: totalRC_Yr,
+  };
+}
 
 // Separate state for iSBR (option 'a') and MBR (option 'b')
 const chemState = { a: null, b: null };
@@ -629,16 +791,31 @@ let activeOption = null;
 // Currently active scenario — used by calculator init to apply scenario-specific doses
 let currentScenarioKey = 'dairy';
 
-// Short commercial framing per scenario (shown below the scenario buttons)
+// Short framing per scenario (shown below the scenario buttons)
 const SCENARIO_BLURBS = {
-  dairy:        'Central case at typical Edgecumbe dairy strength — the headline number.',
-  idf:          'Top-of-range doses, 5-year membrane life, energy and chem creep — the worst-case defence.',
-  conservative: 'MBR-favourable: lower doses, 10-year membrane, no creep — the floor case where iSBR still wins.'
+  dairy:        '<strong>Expected case — typical Edgecumbe dairy strength.</strong><br>' +
+                '• Energy iSBR 19,000 / MBR 23,200 kWh/d (Beca Load List rev 2; intensity consistent with dairy WWTP data in Żyłka et al. 2021 Sci Total Environ + high-MLSS alpha Krampe &amp; Krauth 2003 + scour Qiblawey &amp; Judd 2019)<br>' +
+                '• Membrane 5 yr (Zhang et al. 2021 Engineering 182-plant survey avg; IDF Bulletin 500/2019 reports 2-5 yr in dairy service due to calcium fouling — 5 yr is the optimistic end of the dairy range)<br>' +
+                '• CIP 1 MC/wk + 60-day RC (Zhang 2021 Table 2 industrial avg 4.2 months — conservative for dairy)<br>' +
+                '• Sludge: biological component at parity with iSBR (Wei et al. 2003; Qiblawey &amp; Judd 2019); alum sludge +20% reflecting single-point dosing on MBR<br>' +
+                '• Maintenance $350k iSBR / $550k MBR (benchmarked to comparable Australian MBR operating sites) · Discount 6.6% Fonterra WACC',
+  idf:          '<strong>IDF stress case — peak loading, top-of-range doses.</strong><br>' +
+                '• Energy +10% iSBR (21,000) / +14% MBR (26,500 kWh/d) for peak load scaling<br>' +
+                '• Membrane 4 yr (Zhang et al. 2021 industrial lower bound of 4-7 yr range; consistent with IDF Bulletin 500/2019 dairy range of 2-5 yr)<br>' +
+                '• CIP elevated to 10 MC/wk + 60-day RC (Dupont Memcor high-fouling guide)<br>' +
+                '• Sludge at parity (Wei et al. 2003; Qiblawey &amp; Judd 2019)<br>' +
+                '• Top-of-range chem doses + energy/chem creep · Discount 6.6% Fonterra WACC',
+  conservative: '<strong>Conservative case — MBR-favourable, optimised operations.</strong><br>' +
+                '• Energy iSBR 17,500 / MBR 20,500 kWh/d (lower bound, optimised low-MLSS aeration)<br>' +
+                '• Membrane 7 yr (Zhang et al. 2021 upper bound; Kobayashi &amp; Terada 2025 18-yr full-scale case shows long life achievable, not generic)<br>' +
+                '• CIP 4 MC/wk + 120-day RC (aligns with Zhang 2021 industrial avg) · No creep<br>' +
+                '• Sludge at parity · Lower TP load, threshold-managed cleaning<br>' +
+                '• Discount 6.6% Fonterra WACC — at 8% project hurdle this case narrows materially'
 };
 
 function updateScenarioNote(key) {
   const el = document.getElementById('scenarioNote');
-  if (el && SCENARIO_BLURBS[key]) el.textContent = SCENARIO_BLURBS[key];
+  if (el && SCENARIO_BLURBS[key]) el.innerHTML = SCENARIO_BLURBS[key];
 }
 
 // Mapping from scenario.doses keys to PROCESS_CHEMS ids
@@ -661,7 +838,7 @@ const SCENARIO_DOSE_TO_CHEM_ID = {
 //        - Biological component (PX,TSS - alum = 2,752 kg/d) × 0.87 (industry-typical 13% reduction
 //          for longer SRT MBR, per Metcalf & Eddy Wastewater Engineering 5th ed and dairy MBR benchmarks).
 //        Total MBR: 1,735 + 2,394 = 4,129 kg/d at 8,737 m³/d = 0.473 dry t/ML.
-const DEFAULT_SLUDGE = { a: 0.514, b: 0.473 };
+const DEFAULT_SLUDGE = { a: 0.514, b: 0.553 };
 
 // =========================================================
 // SINGLE SOURCE OF TRUTH — derive scenario chem totals from doses
@@ -688,8 +865,13 @@ function computeChemTotalForScenario(opt, scenarioKey, flow_m3_d) {
     total += dose * basis * c.unitCost;
   });
   if (opt === 'b') {
+    // CIP usage is time-driven (cleaning frequency × per-clean chemistry),
+    // not flow-driven. Derive annual qty from scenario.cipFreq × CIP_DESIGN constants.
+    const cipFreq = scenario.cipFreq || { mcPerWeek: 6, rcIntervalDays: 90, activeTrains: 5 };
+    const cipUsage = deriveCipUsage(cipFreq);
     CIP_CHEMS.forEach(c => {
-      total += c.dose * annualFlow * c.unitCost;
+      const annualQty = cipUsage[c.id] !== undefined ? cipUsage[c.id] : c.dose;
+      total += annualQty * c.unitCost;
     });
   }
   return total;
@@ -748,8 +930,11 @@ function initChemState(opt) {
     chemState[opt].chems[c.id] = { dose: dose, unitCost: c.unitCost };
   });
   if (opt === 'b') {
+    const cipFreq = scenario.cipFreq || { mcPerWeek: 6, rcIntervalDays: 90, activeTrains: 5 };
+    const cipUsage = deriveCipUsage(cipFreq);
     CIP_CHEMS.forEach(c => {
-      chemState[opt].chems[c.id] = { dose: c.dose, unitCost: c.unitCost };
+      const annualQty = cipUsage[c.id] !== undefined ? cipUsage[c.id] : c.dose;
+      chemState[opt].chems[c.id] = { dose: annualQty, unitCost: c.unitCost };
     });
   }
 }
@@ -770,7 +955,7 @@ function openChemCalc(opt) {
   const noteEl = document.getElementById('chemSludgeNote');
   noteEl.textContent = opt === 'a'
     ? 'Source: Peter Huber email 9 Mar 2026 — 5,034 kg dry/d incl. Al-sludge (= 0.58 dry t/ML at 8,700 m³/d)'
-    : 'PLACEHOLDER 0.50 dry t/ML (~14% below iSBR). MBR runs higher MLSS + longer SRT, so net WAS lower. CONFIRM WITH SVEN before lock-in.';
+    : 'Current value 0.553 dry t/ML — biological component at parity with iSBR (consistent with Wei et al. 2003 Water Research and Qiblawey & Judd 2019 Water Sci & Tech, which find industrial MBR observed yield similar to or lower than CAS/SBR due to longer SRT). Alum sludge ~20% higher than iSBR reflecting single-point coagulant dosing on MBR. Net rate +7.7% vs iSBR (conservative allowance — could be revisited toward parity with vendor confirmation).';
   recalcChem();
   document.getElementById('chemModal').classList.add('show');
 }
@@ -818,6 +1003,7 @@ function recalcChem() {
     const annualQty = s.dose * basis;
     const annualCost = annualQty * s.unitCost;
     processSubtotal += annualCost;
+    const noteText = (opt === 'b' && c.noteMBR) ? c.noteMBR : c.note;
     html += `<tr class="${c.status}">
       <td><strong>${c.name}</strong></td>
       <td class="note">${c.purpose}</td>
@@ -826,7 +1012,7 @@ function recalcChem() {
       <td><input type="number" id="chemUnit_${c.id}" value="${s.unitCost}" step="0.01" oninput="recalcChem()"></td>
       <td class="num">${fmtNum(annualQty)}</td>
       <td class="num">${fmtNZD(annualCost)}</td>
-      <td class="note">${c.note}</td>
+      <td class="note">${noteText}</td>
     </tr>`;
   });
   html += `<tr class="subtotal"><td colspan="6">PROCESS chemicals subtotal</td><td class="num">${fmtNZD(processSubtotal)}</td><td></td></tr>`;
@@ -836,14 +1022,17 @@ function recalcChem() {
     html += `<tr class="section-row"><td colspan="8">MEMBRANE CIP CHEMICALS — MBR ONLY</td></tr>`;
     CIP_CHEMS.forEach(c => {
       const s = chemState[opt].chems[c.id];
-      const basis = annualFlow;
-      const annualQty = s.dose * basis;
+      // CIP usage may be time-driven (annual basis — dose IS the annual total)
+      // or flow-driven (dose × annual flow). Annual basis = cleaning frequency
+      // doesn't change with influent flow.
+      const isAnnual = c.basis === 'annual';
+      const annualQty = isAnnual ? s.dose : s.dose * annualFlow;
       const annualCost = annualQty * s.unitCost;
       cipSubtotal += annualCost;
       html += `<tr class="${c.status}">
         <td><strong>${c.name}</strong></td>
         <td class="note">${c.purpose}</td>
-        <td><input type="number" id="chemDose_${c.id}" value="${s.dose}" step="0.01" oninput="recalcChem()"></td>
+        <td><input type="number" id="chemDose_${c.id}" value="${s.dose}" step="${isAnnual ? 100 : 0.01}" oninput="recalcChem()"></td>
         <td class="note">${c.unit}</td>
         <td><input type="number" id="chemUnit_${c.id}" value="${s.unitCost}" step="0.01" oninput="recalcChem()"></td>
         <td class="num">${fmtNum(annualQty)}</td>
@@ -963,16 +1152,20 @@ const ENG_MODELS = {
 
       { type:'section', label:'10. ENERGY - PROCESS AERATION (BECA TABLE 8 EQUIPMENT)' },
       { type:'param', id:'dutyBlowers', label:'Number of duty blowers', value:2, unit:'units', step:1, status:'CONFIRMED', source:'Beca Table 8: 3 blowers total = 2 duty (1 per train of 2 iSBRs) + 1 common standby.' },
-      { type:'param', id:'blowerKw', label:'Blower power per unit', value:88, unit:'kW', step:1, status:'CONFIRMED', source:'Beca Table 8: 88 kW per blower at 5,163 Nm³/hr intake, 1.7:1 pressure ratio, 69% efficiency.' },
-      { type:'param', id:'aerHoursPerDay', label:'Aeration phase duty cycle', value:12, unit:'hr/day', step:1, status:'CONFIRMED', source:'Beca Section 6.6 Figures 12-13: aeration phase (tN) = 180 min of 360 min cycle (99%ile) or 240 min of 480 min cycle (median) = 50% duty. 50% × 24 = 12 hr/day operating equivalent.' },
-      { type:'param', id:'blowerKwhD', label:'Blower daily energy', formula:r=>r.dutyBlowers*r.blowerKw*r.aerHoursPerDay, unit:'kWh/d', status:'DERIVED', source:'duty blowers × kW × hours' },
+      { type:'param', id:'blowerKw', label:'Blower power per unit (nameplate)', value:88, unit:'kW', step:1, status:'PLACEHOLDER', source:'Beca Table 8 lists 88 kW per blower at 5,163 Nm³/hr intake, 1.7:1 pressure ratio, 69% efficiency. CONFIRM WITH CHRIS: is 88 kW the nameplate / design max, or the operating average draw? Operating average is typically 70-85% of nameplate for centrifugal blowers under variable demand.' },
+      { type:'param', id:'blowerHoursPerDay', label:'Blower operating hours', value:12, unit:'hr/day', step:1, status:'CONFIRMED', source:'Beca Section 6.6 Figures 12-13: aeration phase (tN) = 240 min of 480 min cycle (median) or 180 min of 360 min cycle (99%ile) = 50% duty. Blowers run during tN only. 50% × 24 = 12 hr/day operating equivalent. Industrial benchmark indicates iSBR power consumption ~30% lower than MBR (validated against comparable Australian municipal MBR data) — the 50% cycle / 12 hr/day operating basis is consistent with that delta.' },
+      { type:'param', id:'blowerKwhD', label:'Blower daily energy', formula:r=>r.dutyBlowers*r.blowerKw*r.blowerHoursPerDay, unit:'kWh/d', status:'DERIVED', source:'duty blowers × kW × hours' },
       { type:'param', id:'hcmaCount', label:'HYPERCLASSIC Mixer/Aerators count', value:12, unit:'units', step:1, status:'CONFIRMED', source:'Beca Table 8 and INVENT proposal Section 3.1: 12 HYPERCLASSIC Mixer/Aerators (6 per iSBR train, 3 per side).' },
-      { type:'param', id:'hcmaKw', label:'HCMA power per unit', value:22, unit:'kW', step:1, status:'CONFIRMED', source:'Beca Table 8: Aerator Power 22 kW per HCMA. INVENT proposal confirms 150,000 hr design life.' },
-      { type:'param', id:'hcmaKwhD', label:'HCMA daily energy', formula:r=>r.hcmaCount*r.hcmaKw*r.aerHoursPerDay, unit:'kWh/d', status:'DERIVED', source:'count × kW × hours (effective full-power equivalent during aerated phases)' },
+      { type:'param', id:'hcmaKw', label:'HCMA power per unit (nameplate)', value:22, unit:'kW', step:1, status:'PLACEHOLDER', source:'Beca Table 8 lists Aerator Power 22 kW per HCMA. CONFIRM WITH PETER HUBER (INVENT): is 22 kW the nameplate, design peak, or operating average? HCMAs run at full power during aeration (tN) and possibly at reduced power during anoxic mixing (tDN). Need both modes confirmed.' },
+      { type:'param', id:'hcmaHoursPerDay', label:'HCMA operating hours (full-power equivalent)', value:12, unit:'hr/day', step:1, status:'PLACEHOLDER', source:'Assumed equal to blower hours (12 hr/day). HCMAs likely run during both aeration phase (tN, 50% of cycle) AND anoxic mixing (tDN, 15% of cycle, possibly at reduced power), plus mild mixing during settle/decant. CONFIRM WITH PETER HUBER (INVENT) and CHRIS (Beca): what is the effective full-power-equivalent operating hours per day across all phases?' },
+      { type:'param', id:'hcmaKwhD', label:'HCMA daily energy', formula:r=>r.hcmaCount*r.hcmaKw*r.hcmaHoursPerDay, unit:'kWh/d', status:'DERIVED', source:'count × kW × hours (effective full-power equivalent)' },
       { type:'param', id:'aerationKwhD', label:'Process aeration subtotal', formula:r=>r.blowerKwhD+r.hcmaKwhD, unit:'kWh/d', status:'DERIVED', source:'Blowers + HCMAs from Beca Table 8' },
 
-      { type:'section', label:'11. ENERGY - ANCILLARIES (PLACEHOLDER ESTIMATE)' },
-      { type:'param', id:'ancillariesKwhD', label:'Headworks + sludge handling + disinfection + building services', value:2299, unit:'kWh/d', step:100, status:'PLACEHOLDER', source:'Industry typical for plant this size: ~2,300 kWh/d combined. Confirm with Sven. Not Beca-sourced.' },
+      { type:'section', label:'11. ENERGY - ANCILLARIES (PLACEHOLDER BREAKDOWN — TO BE CONFIRMED WITH SVEN/CHRIS)' },
+      { type:'param', id:'sludgeDewateringKwhD_iSBR', label:'Sludge dewatering (RDT + centrifuge + transfer pumps)', value:600, unit:'kWh/d', step:50, status:'PLACEHOLDER', source:'Estimate. RDT operates ~18 hr/day per Beca Section 6.13.1; centrifuge intermittent. Confirm equipment kW and operating hours with Sven.' },
+      { type:'param', id:'headworksFiltrationKwhD_iSBR', label:'Headworks + DAFF filter + influent pumping', value:800, unit:'kWh/d', step:50, status:'PLACEHOLDER', source:'Estimate. Includes screens, balance tank mixing/pumping, DAFF filter feed pumps + air scour, filter backwash. Confirm with Sven.' },
+      { type:'param', id:'uvBldgServicesKwhD_iSBR', label:'UV disinfection + building services + SCADA + instruments', value:899, unit:'kWh/d', step:50, status:'PLACEHOLDER', source:'Estimate. UV continuous ~10-15 kW. Building HVAC, lighting, control system continuous. Confirm with Sven.' },
+      { type:'param', id:'ancillariesKwhD', label:'Ancillaries subtotal', formula:r=>r.sludgeDewateringKwhD_iSBR+r.headworksFiltrationKwhD_iSBR+r.uvBldgServicesKwhD_iSBR, unit:'kWh/d', status:'DERIVED', source:'Sum of placeholder lines above' },
 
       { type:'total', id:'totalEnergy_iSBR', label:'TOTAL DAILY ENERGY (iSBR)', formula:r=>r.aerationKwhD+r.ancillariesKwhD, unit:'kWh/d', applyTo:'aEnergy' },
     ]
@@ -984,51 +1177,51 @@ const ENG_MODELS = {
     intro: 'Engineering basis for MBR membrane-specific chemical and energy calculations. Green rows come from design-team Operational Costs.xlsx; process biological energy and process chemicals remain placeholders pending Sven/Beca confirmation.',
     rows: [
       { type:'section', label:'1. MEMBRANE CONFIGURATION' },
-      { type:'param', id:'avgFlow_MBR', label:'Average flow through membranes', value:8.4, unit:'ML/d', step:0.1, status:'CONFIRMED', source:'Operational Costs.xlsx MBR Option row 2. OPEX model uses 8.7 ML/d; confirm final average flow basis.' },
-      { type:'param', id:'peakFlow_MBR', label:'Peak flow through membranes', value:10.8, unit:'ML/d', step:0.1, status:'CONFIRMED', source:'Op_Costs.xlsx' },
-      { type:'param', id:'areaPerMod', label:'Membrane area per module', value:50, unit:'m²', step:0.5, status:'CONFIRMED', source:'Op_Costs.xlsx — typical module size' },
-      { type:'param', id:'peakFlux', label:'Membrane peak flux', value:30, unit:'L/m²/h', step:1, status:'CONFIRMED', source:'Op_Costs.xlsx' },
-      { type:'param', id:'totalArea', label:'Total required membrane area', value:15000, unit:'m²', step:0.5, status:'CONFIRMED', source:'Op_Costs.xlsx — derived from peak flow / peak flux' },
-      { type:'param', id:'modules', label:'Number of modules', value:300, unit:'-', step:1, status:'CONFIRMED', source:'Op_Costs.xlsx — total area / area per module' },
-      { type:'param', id:'trains', label:'Number of membrane trains', value:5, unit:'-', step:1, status:'CONFIRMED', source:'Op_Costs.xlsx' },
-      { type:'param', id:'modPerTrain', label:'Modules per train', value:60, unit:'-', step:1, status:'CONFIRMED', source:'Op_Costs.xlsx' },
-      { type:'param', id:'dutyCells', label:'Duty cells at average flow', value:4, unit:'-', step:1, status:'CONFIRMED', source:'Op_Costs.xlsx — N-1 redundancy' },
+      { type:'param', id:'avgFlow_MBR', label:'Average flow through membranes', value:8.7, unit:'ML/d', step:0.1, status:'CONFIRMED', source:'Beca Process Design Report 8303-BEC-RPT-PA-0001 design avg flow (= 8,700 m³/d used in OPEX scenarios). Operational_Costs.xlsx MBR Option row 2 has 8.4 ML/d — internal Beca calc inconsistency. Process Design Report is the authoritative tender deliverable so 8.7 used here. Internal review confirmed 8.7 ML/d as the design basis.' },
+      { type:'param', id:'peakFlow_MBR', label:'Peak flow through membranes', value:10.8, unit:'ML/d', step:0.1, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 3.' },
+      { type:'param', id:'areaPerMod', label:'Membrane area per module', value:50, unit:'m²', step:0.5, status:'CONFIRMED', source:'Operational_Costs.xlsx — typical module size.' },
+      { type:'param', id:'peakFlux', label:'Membrane peak flux', value:30, unit:'L/m²/h', step:1, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 6.' },
+      { type:'param', id:'totalArea', label:'Total required membrane area', value:15000, unit:'m²', step:0.5, status:'CONFIRMED', source:'Operational_Costs.xlsx — derived from peak flow ÷ peak flux.' },
+      { type:'param', id:'modules', label:'Number of modules', value:300, unit:'-', step:1, status:'CONFIRMED', source:'Operational_Costs.xlsx — total area ÷ area per module.' },
+      { type:'param', id:'trains', label:'Number of membrane trains', value:5, unit:'-', step:1, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 9 = 5 trains. Expected Case scenario overrides to 3 trains (alternative design input — bidder optimising capex would propose minimum; 99th percentile flow 10.8 ML/d allows 3 trains).' },
+      { type:'param', id:'modPerTrain', label:'Modules per train', value:60, unit:'-', step:1, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 10.' },
+      { type:'param', id:'dutyCells', label:'Duty cells at average flow', value:4, unit:'-', step:1, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 13 — N-1 redundancy.' },
 
       { type:'section', label:'2. MAINTENANCE CIP (MC) — HYPOCHLORITE' },
-      { type:'param', id:'hypoConc', label:'Hypochlorite Cl₂ concentration', value:100, unit:'g Cl₂/L sol', step:5, status:'CONFIRMED', source:'Op_Costs.xlsx. Equates to ~10% by weight commercial hypo (typical 12.5%).' },
-      { type:'param', id:'hypoDensity', label:'Hypochlorite solution density', value:1.20, unit:'kg/L', step:0.5, status:'PLACEHOLDER', source:'Industry typical for 12.5% hypo solution' },
-      { type:'param', id:'cl2PerMC', label:'Cl₂ demand per MC event (per cell)', value:1.5, unit:'kg/MC', step:0.1, status:'CONFIRMED', source:'Op_Costs.xlsx — derived from cell volume × concentration' },
-      { type:'param', id:'mcPerWeek', label:'MC frequency per train', value:1, unit:'MC/week', step:0.5, status:'CONFIRMED', source:'Op_Costs.xlsx — assumes train in production for the week' },
-      { type:'param', id:'hypoPerMC', label:'Hypo solution per MC', formula:r=>r.cl2PerMC*1000/r.hypoConc, unit:'L/MC', status:'DERIVED', source:'Cl₂ kg × 1000 / Cl₂ conc per L. Op_Costs reconciles to 15 L/MC.' },
-      { type:'param', id:'hypoWeekly', label:'Hypo MC use per week', formula:r=>r.dutyCells*r.hypoPerMC*r.mcPerWeek, unit:'L/week', status:'DERIVED', source:'duty cells × hypo per MC × MC per week. Op_Costs reconciles to 60 L/week.' },
-      { type:'param', id:'hypoAnnualMC', label:'Annual hypo from MC', formula:r=>r.hypoWeekly*52, unit:'L/year', status:'DERIVED', source:'weekly × 52. Op_Costs reconciles to 3,120 L/year.' },
+      { type:'param', id:'hypoConc', label:'Hypochlorite Cl₂ concentration', value:100, unit:'g Cl₂/L sol', step:5, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 30. Equates to ~10% by weight commercial hypo (typical 12.5%).' },
+      { type:'param', id:'hypoDensity', label:'Hypochlorite solution density', value:1.20, unit:'kg/L', step:0.5, status:'PLACEHOLDER', source:'Industry typical for 12.5% hypo solution.' },
+      { type:'param', id:'cl2PerMC', label:'Cl₂ demand per MC event (per cell)', value:1.5, unit:'kg/MC', step:0.1, status:'CONFIRMED', source:'Operational_Costs.xlsx baseline 1.5 kg/MC/cell. Expected Case overrides to 2.0 kg/MC/cell (= 20 L hypo/MC/cell) for 3-train Edgecumbe based on dairy fouling profile and smaller pipework requiring proportionally more chemical per fill (industrial MBR operating experience). Scenario.cipFreq.cl2PerMCPerCell overrides this value when loaded.' },
+      { type:'param', id:'mcPerWeek', label:'MC frequency per train', value:1, unit:'MC/week', step:0.5, status:'CONFIRMED', source:'Industrial MBR operating experience confirms 1 MC/week as standard practice. This matches Operational_Costs.xlsx row 35 calc input (1/week). Note: row 33 narrative ("4 duty + 2 extra = 6 MC/week") contradicts row 35; the row 35 weekly figure is adopted as the design basis.' },
+      { type:'param', id:'hypoPerMC', label:'Hypo solution per MC (per cell)', formula:r=>r.cl2PerMC*1000/r.hypoConc, unit:'L/MC', status:'DERIVED', source:'Cl₂ kg × 1000 ÷ Cl₂ conc per L. Operational_Costs.xlsx baseline reconciles to 15 L/MC/cell at 1.5 kg Cl₂. Expected Case reconciles to 20 L/MC/cell at 2.0 kg Cl₂.' },
+      { type:'param', id:'hypoWeekly', label:'Hypo MC use per week', formula:r=>r.dutyCells*r.hypoPerMC*r.mcPerWeek, unit:'L/week', status:'DERIVED', source:'duty cells × hypo per MC × MC per week. Expected Case: 4 × 20 × 1 = 80 L/week. Operational_Costs.xlsx baseline: 4 × 15 × 6 = 360 L/week using row 33 narrative interpretation, or 4 × 15 × 1 = 60 L/week using row 35 calc.' },
+      { type:'param', id:'hypoAnnualMC', label:'Annual hypo from MC', formula:r=>r.hypoWeekly*52, unit:'L/year', status:'DERIVED', source:'Weekly × 52. Expected Case: 80 × 52 = 4,160 L/year. Operational_Costs.xlsx row 40 reconciles to 3,120 L/year at 1 MC/week × 15 L/MC.' },
 
       { type:'section', label:'3. RECOVERY CIP (RC) — HYPOCHLORITE & CITRIC' },
-      { type:'param', id:'rcInterval', label:'Days between RC', value:90, unit:'days', step:5, status:'CONFIRMED', source:'Op_Costs.xlsx' },
-      { type:'param', id:'rcPerTrainYr', label:'RCs per train per year', formula:r=>365/r.rcInterval, unit:'/yr', status:'DERIVED', source:'365 / days_between_rc. Op_Costs reconciles to 4.06.' },
-      { type:'param', id:'totalRC', label:'Total RCs per year', formula:r=>r.rcPerTrainYr*r.trains, unit:'/yr', status:'DERIVED', source:'RC per train × trains. Op_Costs reconciles to 20.28.' },
-      { type:'param', id:'trainVolRC', label:'Train volume during RC', value:30, unit:'m³', step:50, status:'CONFIRMED', source:'Op_Costs.xlsx — volume of chemicals in train during clean' },
-      { type:'param', id:'cl2PerRC', label:'Cl₂ demand per RC per train', value:7.5, unit:'kg/RC/train', step:0.5, status:'CONFIRMED', source:'Op_Costs.xlsx — derived from train volume × cell concentration during soak' },
-      { type:'param', id:'hypoPerRC', label:'Hypo solution per RC per train', formula:r=>r.cl2PerRC*1000/r.hypoConc, unit:'L/RC/train', status:'DERIVED', source:'Cl₂ kg × 1000 / Cl₂ conc per L. Op_Costs reconciles to 75 L/RC/train.' },
-      { type:'param', id:'hypoAnnualRC', label:'Annual hypo from RC', formula:r=>r.totalRC*r.hypoPerRC, unit:'L/year', status:'DERIVED', source:'total RCs × hypo per RC. Op_Costs reconciles to 1,521 L/year.' },
-      { type:'param', id:'citricConc', label:'Citric concentration in RC fill', value:10000, unit:'mg/L', step:0.5, status:'CONFIRMED', source:'Op_Costs.xlsx' },
-      { type:'param', id:'citricPerRC', label:'Citric per RC per train', value:60, unit:'kg/RC/train', step:0.5, status:'CONFIRMED', source:'Op_Costs.xlsx implied (1,217 kg/yr ÷ 20.28 RC = 60 kg/RC)' },
-      { type:'param', id:'citricAnnual', label:'Annual citric use', formula:r=>r.totalRC*r.citricPerRC, unit:'kg/year', status:'DERIVED', source:'total RCs × citric per RC. Op_Costs reconciles to 1,217 kg/year.' },
+      { type:'param', id:'rcInterval', label:'Days between RC', value:90, unit:'days', step:5, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 54 baseline 90 days. Expected Case scenario overrides to 60 days based on dairy fouling profile (90 days insufficient for high-organic dairy effluent). Industrial MBR operating data shows monthly RC at the upper bound of practice.' },
+      { type:'param', id:'rcPerTrainYr', label:'RCs per train per year', formula:r=>365/r.rcInterval, unit:'/yr', status:'DERIVED', source:'365 ÷ days_between_RC. Operational_Costs.xlsx reconciles to 4.06 at 90 days. Expected Case at 60 days = 6.08.' },
+      { type:'param', id:'totalRC', label:'Total RCs per year', formula:r=>r.rcPerTrainYr*r.trains, unit:'/yr', status:'DERIVED', source:'RC per train × trains. Operational_Costs.xlsx reconciles to 20.28 (5 trains × 4.06). Expected Case 3 trains × 6.08 = 18.25.' },
+      { type:'param', id:'trainVolRC', label:'Train volume during RC', value:30, unit:'m³', step:50, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 51 — volume of chemicals in train during clean.' },
+      { type:'param', id:'cl2PerRC', label:'Cl₂ demand per RC per train', value:7.5, unit:'kg/RC/train', step:0.5, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 52 — derived from train volume × cell concentration during soak.' },
+      { type:'param', id:'hypoPerRC', label:'Hypo solution per RC per train', formula:r=>r.cl2PerRC*1000/r.hypoConc, unit:'L/RC/train', status:'DERIVED', source:'Cl₂ kg × 1000 ÷ Cl₂ conc per L. Operational_Costs.xlsx row 53 reconciles to 75 L/RC/train.' },
+      { type:'param', id:'hypoAnnualRC', label:'Annual hypo from RC', formula:r=>r.totalRC*r.hypoPerRC, unit:'L/year', status:'DERIVED', source:'total RCs × hypo per RC. Operational_Costs.xlsx row 60 reconciles to 1,521 L/year at 5 trains × 90 days. Expected Case: 18.25 × 75 = 1,369 L/year.' },
+      { type:'param', id:'citricConc', label:'Citric concentration in RC fill', value:10000, unit:'mg/L', step:0.5, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 70.' },
+      { type:'param', id:'citricPerRC', label:'Citric per RC per train', value:60, unit:'kg/RC/train', step:0.5, status:'CONFIRMED', source:'Operational_Costs.xlsx MBR Option row 77. Reconciliation: row 80 has 1,217 kg/yr at 20.28 RC × 60 kg/RC. Note row 77 label says "L/RC/train" but value 60 is kg (consistency check from row 80). Industrial MBR practice confirms citric is RC-only and not used in MC.' },
+      { type:'param', id:'citricAnnual', label:'Annual citric use', formula:r=>r.totalRC*r.citricPerRC, unit:'kg/year', status:'DERIVED', source:'total RCs × citric per RC. Operational_Costs.xlsx row 80 reconciles to 1,217 kg/year. Expected Case: 18.25 × 60 = 1,095 kg/year.' },
 
       { type:'section', label:'4. CHEMICAL COSTS — CIP' },
-      { type:'param', id:'hypoTotalAnnual', label:'TOTAL annual hypochlorite', formula:r=>r.hypoAnnualMC+r.hypoAnnualRC, unit:'L/year', status:'DERIVED', source:'MC + RC. Op_Costs reconciles to 4,641 L/year.' },
-      { type:'param', id:'hypoUnitCost', label:'Hypo unit cost', value:2.00, unit:'NZD/L', step:0.1, status:'PLACEHOLDER', source:'Industry typical NZ market 1.50-2.50 NZD/L delivered. Confirm with procurement.' },
+      { type:'param', id:'hypoTotalAnnual', label:'TOTAL annual hypochlorite', formula:r=>r.hypoAnnualMC+r.hypoAnnualRC, unit:'L/year', status:'DERIVED', source:'MC + RC. Operational_Costs.xlsx baseline (row 65): 3,120 + 1,521 = 4,641 L/year at 1 MC/week × 15 L. Expected Case: 4,160 + 1,369 = 5,529 L/year at 1 MC/week × 20 L + 60-day RC.' },
+      { type:'param', id:'hypoUnitCost', label:'Hypo unit cost', value:1.395, unit:'NZD/L', step:0.05, status:'CONFIRMED', source:'IXOM quote May 2026: $1,395/IBC = $1.395/L delivered ex GST. Same product as iSBR re-use water disinfection hypochlorite.' },
       { type:'param', id:'hypoAnnualCost', label:'Hypo annual cost', formula:r=>r.hypoTotalAnnual*r.hypoUnitCost, unit:'NZD/yr', status:'DERIVED', source:'annual qty × unit cost', isCurrency:true },
       { type:'param', id:'citricUnitCost', label:'Citric unit cost', value:5.00, unit:'NZD/kg', step:0.1, status:'PLACEHOLDER', source:'Industry typical NZ market 4-6 NZD/kg. Confirm with procurement.' },
       { type:'param', id:'citricAnnualCost', label:'Citric annual cost', formula:r=>r.citricAnnual*r.citricUnitCost, unit:'NZD/yr', status:'DERIVED', source:'annual qty × unit cost', isCurrency:true },
       { type:'subtotal', id:'cipSubtotal', label:'CIP CHEMICALS SUBTOTAL', formula:r=>r.hypoAnnualCost+r.citricAnnualCost, unit:'NZD/yr', isCurrency:true },
 
       { type:'section', label:'5. CHEMICAL COSTS — PROCESS' },
-      { type:'param', id:'alumDose_MBR', label:'Alum dose rate (46% liquid)', value:914, unit:'L/ML', step:10, status:'CONFIRMED', source:'Beca iSBR base 762 L/ML × 1.20 mbrAlumFactor (Sven: MBR uses 20% more alum than iSBR).' },
+      { type:'param', id:'alumDose_MBR', label:'Alum dose rate (46% liquid)', value:914, unit:'L/ML', step:10, status:'CONFIRMED', source:'iSBR baseline 762 L/ML × 1.20 = 914 L/ML. iSBR uses split alum dosing across two stages; MBR uses single-point dosing. Two-stage dosing requires less total alum for the same TP target — first dose addresses bulk P load, second optimised against residual P only.' },
       { type:'param', id:'alumUnit_MBR', label:'Alum unit cost', value:1.02, unit:'NZD/L', step:0.05, status:'CONFIRMED', source:'IXOM quote May 2026: $1.02/L delivered ex GST, bulk tanker (≥20kL).' },
       { type:'param', id:'annualFlowM_MBR', label:'Annual flow', formula:r=>r.avgFlow_MBR*365, unit:'ML/yr', status:'DERIVED', source:'avg flow × 365' },
       { type:'param', id:'alumCost_MBR', label:'Annual alum cost', formula:r=>r.alumDose_MBR*r.annualFlowM_MBR*r.alumUnit_MBR, unit:'NZD/yr', status:'DERIVED', source:'dose × annual flow × unit cost', isCurrency:true },
-      { type:'param', id:'sludgeRate_MBR', label:'Sludge production rate', value:0.473, unit:'dry t/ML', step:0.05, status:'CONFIRMED', source:'Derived from Beca data: Al_Sludge 1,735 kg/d (Sec 6.7.3, same alum dose as iSBR for same TP target) + biological 2,752×0.87 = 2,394 kg/d (industry-typical 13% reduction for longer SRT MBR, Metcalf & Eddy 5th ed). Total 4,129 kg/d at 8,737 m³/d = 0.473 dry t/ML.' },
+      { type:'param', id:'sludgeRate_MBR', label:'Sludge production rate', value:0.553, unit:'dry t/ML', step:0.05, status:'CONFIRMED', source:'iSBR has 4,487 kg/d total per Beca Process Design Report Table 6 PX,TSS median = 2,752 kg/d biological + 1,735 kg/d alum. MBR breakdown: same biological component (similar SRT and biology — no reduction factor applied) + alum 20% higher (single-point dosing on MBR is less stoichiometrically efficient than iSBR split dosing). MBR total: 2,752 + 1,735 × 1.20 = 4,834 kg/d = 0.553 dry t/ML. Cross-check rule of thumb: ~55% biological, ~45% alum — model is 57/43 split, within tolerance.' },
       { type:'param', id:'sludgeTYr_MBR', label:'Annual sludge production', formula:r=>r.annualFlowM_MBR*r.sludgeRate_MBR, unit:'dry t/yr', status:'DERIVED', source:'flow × sludge rate' },
       { type:'param', id:'polymerDose_MBR', label:'Polymer dose (50% emulsion)', value:45, unit:'L/dry t', step:1, status:'CONFIRMED', source:'Same as iSBR design: Beca Table 16 basis.' },
       { type:'param', id:'polymerUnit_MBR', label:'Polymer unit cost', value:6.55, unit:'NZD/L', step:0.05, status:'CONFIRMED', source:'IXOM quote May 2026: $6,550/1000L IBC = $6.55/L delivered ex GST.' },
@@ -1059,8 +1252,13 @@ const ENG_MODELS = {
       { type:'param', id:'blowerKwhYr', label:'Air scour blower annual energy', formula:r=>r.blowerKw*24*365, unit:'kWh/yr', status:'DERIVED', source:'kW × 24 × 365. Op_Costs reconciles to 224,493 kWh/yr.' },
       { type:'subtotal', id:'membraneKwhD', label:'MEMBRANE-RELATED DAILY ENERGY', formula:r=>(r.pumpKw+r.blowerKw)*24, unit:'kWh/d', source:'Design-team Operational Costs.xlsx: pump 172,830 kWh/yr + air scour 224,493 kWh/yr = 397,323 kWh/yr (= 1,089 kWh/d), membrane-specific only.' },
 
-      { type:'section', label:'7. ENERGY — PROCESS / BIOLOGICAL (PLACEHOLDER)' },
-      { type:'param', id:'processKwhD_MBR', label:'Process aeration + headworks + sludge + disinf + bldg svcs', value:9411, unit:'kWh/d', step:100, status:'PLACEHOLDER', source:'MBR runs continuous aeration at higher MLSS than SBR — typical ~9,400 kWh/d for plant this size. Confirm with Sven.' },
+      { type:'section', label:'7. ENERGY — PROCESS / BIOLOGICAL (PLACEHOLDER BREAKDOWN — TO BE CONFIRMED WITH SVEN)' },
+      { type:'param', id:'processAerationKwhD_MBR', label:'Process aeration (biological — continuous, higher MLSS than SBR)', value:5500, unit:'kWh/d', step:100, status:'PLACEHOLDER', source:'Benchmarked to comparable Australian municipal MBR plant (~30 ML/d) currently under design — total MBR OPEX 30% higher than granular sludge SBR at that plant. Scaled to Edgecumbe size. Per-equipment breakdown subject to internal design team confirmation.' },
+      { type:'param', id:'sludgeDewateringKwhD_MBR', label:'Sludge dewatering (RDT + centrifuge + transfer pumps)', value:800, unit:'kWh/d', step:50, status:'PLACEHOLDER', source:'Estimate. Similar to iSBR side (same equipment classes, slightly less sludge). Confirm with Sven.' },
+      { type:'param', id:'headworksKwhD_MBR', label:'Headworks + balance tank + influent pumping', value:600, unit:'kWh/d', step:50, status:'PLACEHOLDER', source:'Estimate. Includes screens, balance tank mixing/pumping. MBR has no DAFF (membrane is the polishing step) so slightly lower than iSBR side. Confirm with Sven.' },
+      { type:'param', id:'uvKwhD_MBR', label:'UV disinfection', value:400, unit:'kWh/d', step:50, status:'PLACEHOLDER', source:'Estimate. UV continuous ~10-20 kW depending on flow. Confirm with Sven (or determine whether UV is even required downstream of membrane).' },
+      { type:'param', id:'bldgServicesKwhD_MBR', label:'Building services + SCADA + instruments + misc', value:2111, unit:'kWh/d', step:100, status:'PLACEHOLDER', source:'Estimate. HVAC, lighting, control system, instruments, compressed air, heating/cooling. Continuous loads. Confirm with Sven.' },
+      { type:'param', id:'processKwhD_MBR', label:'Process / biological subtotal', formula:r=>r.processAerationKwhD_MBR+r.sludgeDewateringKwhD_MBR+r.headworksKwhD_MBR+r.uvKwhD_MBR+r.bldgServicesKwhD_MBR, unit:'kWh/d', status:'DERIVED', source:'Sum of placeholder lines above. Original lumped figure 9,411 kWh/d from "another plant similar" — broken down here for line-by-line confirmation with Sven.' },
 
       { type:'total', id:'totalEnergy_MBR', label:'TOTAL DAILY ENERGY (MBR)', formula:r=>r.membraneKwhD+r.processKwhD_MBR, unit:'kWh/d', applyTo:'bEnergy' },
     ]
@@ -1099,6 +1297,16 @@ function initEngState(opt) {
       engState[opt][engRowId] = dose;
     }
   });
+  // Override CIP frequency rows (MBR only) from scenario.cipFreq so the
+  // engineering calc tracks the same MC/week, RC interval, train count and per-clean Cl2 as the front page.
+  if (opt === 'b' && scenario.cipFreq) {
+    if (engState[opt].mcPerWeek !== undefined) engState[opt].mcPerWeek = scenario.cipFreq.mcPerWeek;
+    if (engState[opt].rcInterval !== undefined) engState[opt].rcInterval = scenario.cipFreq.rcIntervalDays;
+    if (engState[opt].trains !== undefined) engState[opt].trains = scenario.cipFreq.activeTrains;
+    if (engState[opt].cl2PerMC !== undefined && scenario.cipFreq.cl2PerMCPerCell !== undefined) {
+      engState[opt].cl2PerMC = scenario.cipFreq.cl2PerMCPerCell;
+    }
+  }
 }
 
 function openEngCalc(opt) {
@@ -1236,7 +1444,7 @@ function applyEngEnergyToInputs() {
 
 
 function val(id) { return parseFloat(document.getElementById(id).value) || 0; }
-function setVal(id, v) { document.getElementById(id).value = v; }
+function setVal(id, v) { const el = document.getElementById(id); if (el) el.value = v; }
 function fmtNZD(n) {
   if (Math.abs(n) >= 1e6) return '$' + (n/1e6).toFixed(2) + 'M';
   if (Math.abs(n) >= 1e3) return '$' + (n/1e3).toFixed(0) + 'k';
@@ -1254,7 +1462,7 @@ function loadScenario(key, btn) {
     //   designed at 8,700 m³/d so loading them shouldn't reset the user's input).
     // aSludge/bSludge/aEnergy/bEnergy are skipped — applyFlowScaling sets them
     //   from scenario base × flow ratio so they track the current flow.
-    if (k === 'doses' || k === 'doseRationale' || k === 'mbrAlumFactor') continue;
+    if (k === 'doses' || k === 'doseRationale' || k === 'mbrAlumFactor' || k === 'cipFreq') continue;
     if (k === 'aChem' || k === 'bChem') continue;
     if (k === 'avgFlow') continue;
     if (k === 'aSludge' || k === 'bSludge') continue;
@@ -1761,37 +1969,46 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 </script>
 
-
-<!-- PASSWORD GATE SCRIPT -->
 <script>
-(function() {
-  if (sessionStorage.getItem('mcd_auth') === '1') {
-    document.getElementById('mcd-gate').style.display = 'none';
+(function(){
+  if(sessionStorage.getItem('mcd_auth')==='1'){
+    document.getElementById('mcd-gate').style.display='none';
   }
 })();
 
-function mcdCheckPassword() {
-  var input = document.getElementById('mcd-gate-input').value;
-  if (input === 'EDGECUMBEWWTP') {
-    sessionStorage.setItem('mcd_auth', '1');
-    var gate = document.getElementById('mcd-gate');
-    gate.style.transition = 'opacity .3s';
-    gate.style.opacity = '0';
-    setTimeout(function() { gate.style.display = 'none'; }, 300);
+function mcdCheckPassword(){
+  var v=document.getElementById('mcd-gate-input').value;
+  if(v==='EDGECUMBEWWTP'){
+    sessionStorage.setItem('mcd_auth','1');
+    var g=document.getElementById('mcd-gate');
+    g.style.transition='opacity .3s';g.style.opacity='0';
+    setTimeout(function(){g.style.display='none';},300);
   } else {
-    document.getElementById('mcd-gate-err').style.display = 'block';
-    document.getElementById('mcd-gate-input').value = '';
+    document.getElementById('mcd-gate-err').style.display='block';
+    document.getElementById('mcd-gate-input').value='';
     document.getElementById('mcd-gate-input').focus();
   }
 }
 
-document.addEventListener('keydown', function(e) {
-  if (e.key === 'Enter' && document.getElementById('mcd-gate') &&
-      document.getElementById('mcd-gate').style.display !== 'none') {
-    mcdCheckPassword();
+function openUserGuide(){
+  var fr=document.getElementById('ug-frame');
+  if(!fr.src||fr.src==='about:blank'||fr.src===window.location.href){
+    fr.src='./UserGuide.pdf';
   }
+  document.getElementById('ug-overlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeUserGuide(){
+  document.getElementById('ug-overlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+document.addEventListener('keydown',function(e){
+  var g=document.getElementById('mcd-gate');
+  if(e.key==='Enter'&&g&&g.style.display!=='none'&&g.style.opacity!=='0'){mcdCheckPassword();}
+  if(e.key==='Escape'){closeUserGuide();}
 });
 </script>
-
 </body>
 </html>
