@@ -131,6 +131,8 @@ body{font-family:Arial,'Segoe UI',Tahoma,sans-serif;background:var(--page);color
 @media(max-width:640px){.container{padding:10px}.header{padding:18px}.metrics{grid-template-columns:1fr}.control-row{grid-template-columns:1fr 110px 56px}.display-row{grid-template-columns:1fr auto 54px}.chart-wrapper{height:300px}}
 
 <style>
+body.gate-active{overflow:hidden !important;height:100vh !important}
+body.gate-active>*:not(#mcd-gate):not(#ug-overlay){display:none !important}
 #mcd-gate{position:fixed;inset:0;z-index:99999;background:#f3f6f2;display:flex;align-items:center;justify-content:center;font-family:Arial,'Segoe UI',Tahoma,sans-serif}
 #mcd-gate-box{background:#fff;border-radius:8px;border:1px solid #dbe5dd;box-shadow:0 4px 24px rgba(21,25,22,.10);padding:40px 44px 36px;width:100%;max-width:400px;text-align:center}
 #mcd-gate-logo-bar{width:64px;height:5px;background:#2e9e46;border-radius:1px;margin:0 auto 14px}
@@ -1973,6 +1975,8 @@ window.addEventListener('DOMContentLoaded', () => {
 (function(){
   if(sessionStorage.getItem('mcd_auth')==='1'){
     document.getElementById('mcd-gate').style.display='none';
+  } else {
+    document.body.classList.add('gate-active');
   }
 })();
 
@@ -1981,6 +1985,7 @@ function mcdCheckPassword(){
   if(v==='EDGECUMBEWWTP'){
     sessionStorage.setItem('mcd_auth','1');
     var g=document.getElementById('mcd-gate');
+    document.body.classList.remove('gate-active');
     g.style.transition='opacity .3s';g.style.opacity='0';
     setTimeout(function(){g.style.display='none';},300);
   } else {
